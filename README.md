@@ -1,2 +1,2 @@
 # FlutterAcademy
-Brings you all the best Flutter project Ideas and architecture to develop your next production-scale Flutter project
+Provides developers with the most useful Flutter resources and architecture to develop production-scale Flutter projects.
