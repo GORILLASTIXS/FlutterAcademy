@@ -9,11 +9,11 @@ This project is a starting point for a Flutter application.
 A few resources to get you started if this is your first Flutter project:
 
 Packages:
--https://pub.dev/packages/jitsi_meet
--https://pub.dev/packages/firebase_auth
--https://pub.dev/packages/firebase_core
--https://pub.dev/packages/cloud_firestore
--https://pub.dev/packages/google_sign_in
+- https://pub.dev/packages/jitsi_meet
+- https://pub.dev/packages/firebase_auth
+- https://pub.dev/packages/firebase_core
+- https://pub.dev/packages/cloud_firestore
+- https://pub.dev/packages/google_sign_in
 
 
 For help getting started with Flutter, view our
