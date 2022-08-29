@@ -1,6 +1,6 @@
 # meet_app
 
-A new Flutter project.
+A zoom based Flutter project.
 
 ## Getting Started
 
