@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.meet_app">
+    package="com.example.meet_app"
+    xmlns:tools="http://schemas.android.com/tools">
    <application
+        tools:replace="android:label"
         android:label="meet_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
