@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:meet_app/resources/google_auth.dart';
+import 'package:meet_app/screens/HomeScreen.dart';
+import 'package:meet_app/screens/google_sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +27,24 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        '/login': (context) => const GoogleSiginInScreen(),
+        '/home': (context) => const HomeScreen(),
+      },
+
+      home: StreamBuilder(
+        stream: GoogleAuth().authUpdates,
+        builder:  (context, snapshot) {
+          if(snapshot.connectionState == ConnectionState.waiting){
+            return Center(
+              child: const CircularProgressIndicator(),
+            );
+          }
+          if(snapshot.hasData){
+            return HomeScreen();
+
+          } return GoogleSiginInScreen();
+        })
     );
   }
 }
