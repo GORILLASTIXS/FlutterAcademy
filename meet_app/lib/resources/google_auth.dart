@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:meet_app/utils/snackbar_message.dart';
 
 class GoogleAuth{
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -27,10 +28,12 @@ class GoogleAuth{
           'uid': user.uid, 'profilePhoto': user.photoURL}
         );
       }
-    }
+    }res = true;
 
    } on FirebaseAuthException catch(e){
-
+        snackBarMessage(context, e.message!);
+        res = false;
    }
+   return res;
   }
 }
